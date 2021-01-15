@@ -29,6 +29,7 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Themosis\Core\Bootstrap\LoadEnvironmentVariables;
 use Themosis\Core\Events\LocaleUpdated;
 use Themosis\Route\RouteServiceProvider;
+use function defined;
 use function request;
 use function str_contains;
 use const DIRECTORY_SEPARATOR;
@@ -1545,7 +1546,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
      */
     public function isWordPressAdmin()
     {
-        if (str_contains(request()->url(), '/wp-admin/')) {
+        if (
+            str_contains(request()->url(), '/wp-admin/')
+            && !str_contains(request()->url(), 'admin-ajax.php')
+            && !str_contains(request()->url(), 'wp-json')
+        ) {
             return true;
         } else if (isset($GLOBALS['current_screen']) && is_a($GLOBALS['current_screen'], 'WP_Screen')) {
             return $GLOBALS['current_screen']->in_admin();
