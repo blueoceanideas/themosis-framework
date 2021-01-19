@@ -28,7 +28,7 @@
     }
   },
   "require": {
-    "php": "^7.3",
+    "php": "^7.3 || ^8.0",
     "composer/installers": "^1.0",
     "dragonmantank/cron-expression": "^3.0",
     "egulias/email-validator": "^2.1.10",
