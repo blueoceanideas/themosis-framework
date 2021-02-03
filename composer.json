@@ -98,11 +98,11 @@
     "friendsofphp/php-cs-fixer": "^2.15",
     "phpstan/phpstan": "^0.12",
     "szepeviktor/phpstan-wordpress": "^0.6.0",
-    "symfony/var-dumper": "^5.1",
-    "filp/whoops": "^2.4"
+    "symfony/var-dumper": "^5.1"
   },
   "suggest": {
-    "fzaninotto/faker": "Required to use the eloquent factory builder (^1.8)."
+    "fzaninotto/faker": "Required to use the eloquent factory builder (^1.8).",
+    "filp/whoops": "^2.4"
   },
   "provide": {
     "psr/container-implementation": "1.0"
