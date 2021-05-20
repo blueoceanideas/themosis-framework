@@ -41,6 +41,11 @@ class Application extends Container implements ApplicationContract, CachesConfig
      * @var string
      */
     const VERSION = '8.12.3';
+	
+	/**
+	 * Application textdomain.
+	 */
+	const TEXTDOMAIN = 'themosis';
 
     /**
      * The base path for the Laravel installation.
